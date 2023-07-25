@@ -20,7 +20,7 @@ apt_update(){
 }
 
 auto_clean(){
-    apt_update -y
+    sudo apt_update -y
     sudo apt autoclean -y
     sudo apt auto-remove -y
 }
@@ -75,7 +75,7 @@ backup_programs(){
 
 backup_programs_DPKG(){
     apt_update;
-    #       ou          # é preciso fazer a lista antes de rodar, ter salvo a lista antes de formatar
+    #   ou   # é preciso fazer a lista antes de rodar, ter salvo a lista antes de formatar
     programs_for_install_with_dpkg=(
        /media/mamede/6ceb22a0-df7d-453a-941c-90681a0d1d46/
         Script backup//list_programs.txt)
